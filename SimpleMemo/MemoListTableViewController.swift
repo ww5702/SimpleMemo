@@ -9,6 +9,13 @@ import UIKit
 
 class MemoListTableViewController: UITableViewController {
 
+    let formatter: DateFormatter = {
+       let f = DateFormatter()
+        f.dateStyle = .long         // 연도 월 일, 표시하려면 long 표시하지 않으려면 short
+        f.timeStyle = .short        // 시 분 초
+        // f.locale = Locale(identifier: "Ko_kr")   날짜와 시간이 한글로 나오지 않는다면 설정
+        return f
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,9 +38,10 @@ class MemoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
+        // cell이 비어있기에 밑에있는 구문들이 채워넣는 디자인같은것
         let target = Memo.dummyMemoList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = target.insertData.description
+        cell.detailTextLabel?.text = formatter.string(from: target.insertData)
 
         return cell
     }
