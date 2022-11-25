@@ -13,6 +13,7 @@
 		C145936D29309FFC008BD243 /* SimpleMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C145936B29309FFC008BD243 /* SimpleMemo.xcdatamodeld */; };
 		C145936F29309FFC008BD243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C145936E29309FFC008BD243 /* Assets.xcassets */; };
 		C145937229309FFC008BD243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C145937029309FFC008BD243 /* LaunchScreen.storyboard */; };
+		C145937B2930A918008BD243 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145937A2930A918008BD243 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C145936E29309FFC008BD243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C145937129309FFC008BD243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C145937329309FFC008BD243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C145937A2930A918008BD243 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C145936129309FFC008BD243 /* SimpleMemo */ = {
 			isa = PBXGroup;
 			children = (
+				C14593792930A8FE008BD243 /* Model */,
 				C145936229309FFC008BD243 /* AppDelegate.swift */,
 				C145936429309FFC008BD243 /* SceneDelegate.swift */,
 				C145936829309FFC008BD243 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				C145936B29309FFC008BD243 /* SimpleMemo.xcdatamodeld */,
 			);
 			path = SimpleMemo;
+			sourceTree = "<group>";
+		};
+		C14593792930A8FE008BD243 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C145937A2930A918008BD243 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				C145936329309FFC008BD243 /* AppDelegate.swift in Sources */,
 				C145936529309FFC008BD243 /* SceneDelegate.swift in Sources */,
 				C145936D29309FFC008BD243 /* SimpleMemo.xcdatamodeld in Sources */,
+				C145937B2930A918008BD243 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
