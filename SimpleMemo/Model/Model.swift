@@ -10,11 +10,11 @@ import Foundation
 class Memo {
     // 내용과 날짜
     var content: String
-    var insertData: Data
+    var insertData: Date
     
     init(content: String) {
         self.content = content
-        insertData = Data()     // Data() = 현재날짜
+        insertData = Date()     // Date() = 현재날짜
     }
     
     // 일단 더미로
