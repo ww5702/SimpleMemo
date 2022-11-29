@@ -36,8 +36,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="새 메모" id="V0w-Zp-vfG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nra-pA-Hhj"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GzS-r4-uyp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nra-pA-Hhj">
+                            <connections>
+                                <action selector="close:" destination="8tG-5F-nWJ" id="dcR-Mq-UDY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GzS-r4-uyp">
+                            <connections>
+                                <action selector="save:" destination="8tG-5F-nWJ" id="pbC-Cm-hCE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWQ-ne-Puo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
