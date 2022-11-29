@@ -36,6 +36,14 @@ class MemoListTableViewController: UITableViewController {
         }
     }
     
+    // 메모 가져오기
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            if let vc = segue.destination as? DetailViewController {
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+            }
+        }
+    }
     override func viewDidLoad() {
         // 뷰가 실행될 때 한번 실행되는 코드로
         // 보통 한번만 실행되는 초기화 코드를 여기서 실행
