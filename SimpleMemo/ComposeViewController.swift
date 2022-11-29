@@ -27,6 +27,8 @@ class ComposeViewController: UIViewController {
 //        let newMemo = Memo(content: memo)
 //        Memo.dummyMemoList.append(newMemo)
         
+        DataManager.shared.addNewMemo(memo)
+        
         // 자동으로 테이블 목록을 업데이트 시켜주지않음
         // 따라서 Notification
         NotificationCenter.default.post(name: ComposeViewController.newMemoDidInsert, object: nil)

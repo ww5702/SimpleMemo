@@ -36,6 +36,18 @@ class DataManager {
     
     }
     
+    func addNewMemo(_ memo: String?) {
+        let newMemo = Memo(context: mainContext)
+        newMemo.content = memo
+        newMemo.insertDate = Date()
+        
+        // append추가는 맨뒤로, insert추가는 맨 앞으로ㅓ
+        memoList.insert(newMemo, at: 0)
+        
+        saveContext()
+        
+    }
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
