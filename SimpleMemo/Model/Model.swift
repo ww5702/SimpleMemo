@@ -7,21 +7,21 @@
 
 import Foundation
 
-class Memo {
-    // 내용과 날짜
-    var content: String
-    var insertData: Date
-    
-    init(content: String) {
-        self.content = content
-        insertData = Date()     // Date() = 현재날짜
-    }
-    
-    // 일단 더미로
-    static var dummyMemoList = [
-        Memo(content: "Lorem Ipsum"),
-        Memo(content: "😃😃😃😃😃")
-    ]
-    
-    
-}
+//class Memo {
+//    // 내용과 날짜
+//    var content: String
+//    var insertDate: Date
+//
+//    init(content: String) {
+//        self.content = content
+//        insertDate = Date()     // Date() = 현재날짜
+//    }
+//
+//    // 일단 더미로
+//    static var dummyMemoList = [
+//        Memo(content: "Lorem Ipsum"),
+//        Memo(content: "😃😃😃😃😃")
+//    ]
+//
+//
+//}
