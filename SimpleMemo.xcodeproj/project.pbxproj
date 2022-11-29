@@ -15,6 +15,7 @@
 		C145937229309FFC008BD243 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C145937029309FFC008BD243 /* LaunchScreen.storyboard */; };
 		C145937B2930A918008BD243 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145937A2930A918008BD243 /* Model.swift */; };
 		C145937D2930AAA9008BD243 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145937C2930AAA9008BD243 /* MemoListTableViewController.swift */; };
+		C145937F2935DAA0008BD243 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C145937E2935DAA0008BD243 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C145937329309FFC008BD243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C145937A2930A918008BD243 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C145937C2930AAA9008BD243 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		C145937E2935DAA0008BD243 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C145937329309FFC008BD243 /* Info.plist */,
 				C145936B29309FFC008BD243 /* SimpleMemo.xcdatamodeld */,
 				C145937C2930AAA9008BD243 /* MemoListTableViewController.swift */,
+				C145937E2935DAA0008BD243 /* ComposeViewController.swift */,
 			);
 			path = SimpleMemo;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				C145936329309FFC008BD243 /* AppDelegate.swift in Sources */,
 				C145936529309FFC008BD243 /* SceneDelegate.swift in Sources */,
 				C145937D2930AAA9008BD243 /* MemoListTableViewController.swift in Sources */,
+				C145937F2935DAA0008BD243 /* ComposeViewController.swift in Sources */,
 				C145936D29309FFC008BD243 /* SimpleMemo.xcdatamodeld in Sources */,
 				C145937B2930A918008BD243 /* Model.swift in Sources */,
 			);

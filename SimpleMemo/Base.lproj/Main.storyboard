@@ -4,10 +4,46 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--새 메모-->
+        <scene sceneID="O7k-Ml-W92">
+            <objects>
+                <viewController id="8tG-5F-nWJ" customClass="ComposeViewController" customModule="SimpleMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XkC-tv-IUI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-4f-j47">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BVv-eT-3gP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ap6-4f-j47" firstAttribute="trailing" secondItem="BVv-eT-3gP" secondAttribute="trailing" id="G2I-pZ-jQb"/>
+                            <constraint firstItem="ap6-4f-j47" firstAttribute="top" secondItem="XkC-tv-IUI" secondAttribute="top" id="IZD-vN-AEK"/>
+                            <constraint firstItem="ap6-4f-j47" firstAttribute="bottom" secondItem="BVv-eT-3gP" secondAttribute="bottom" id="Wfk-V4-MN9"/>
+                            <constraint firstItem="ap6-4f-j47" firstAttribute="leading" secondItem="BVv-eT-3gP" secondAttribute="leading" id="ymc-Xf-AC6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 메모" id="V0w-Zp-vfG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nra-pA-Hhj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="GzS-r4-uyp"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mWQ-ne-Puo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652.6717557251907" y="-306.33802816901408"/>
+        </scene>
         <!--Simple_Memo-->
         <scene sceneID="0Xo-No-257">
             <objects>
@@ -48,12 +84,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Simple_Memo" id="2pm-QB-7gF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIe-ei-jC8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZIe-ei-jC8">
+                            <connections>
+                                <segue destination="LvS-wM-lUV" kind="presentation" id="6Yj-gs-g1U"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evP-aO-Xmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="-13"/>
+            <point key="canvasLocation" x="355" y="-13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e4y-B6-wuL">
@@ -71,8 +111,29 @@
             </objects>
             <point key="canvasLocation" x="-309" y="-13"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kHk-zW-TJg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LvS-wM-lUV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ax5-Cg-qGB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8tG-5F-nWJ" kind="relationship" relationship="rootViewController" id="kgk-fg-XhH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7k1-Ji-OgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="-306"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
