@@ -35,4 +35,4 @@ Var window: UIWindow?
    
 Notification 에 관하여   
    
-iOS에서 db를 사용할때는 Core Data를 사용   
+iOS에서 db를 사용할때는 Core Data를 사용    
