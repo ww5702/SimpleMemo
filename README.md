@@ -36,4 +36,8 @@ Var window: UIWindow?
 Notification 에 관하여   
    
 iOS에서 db를 사용할때는 Core Data를 사용    
- 
+  
+***
+2022.12.08   
+메모를 편집하는 기능이 하나의 화면을 공유하는 방식으로 사용   
+Navigation controller로 새그웨이를 연결   
