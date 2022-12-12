@@ -40,6 +40,16 @@ class DetailViewController: UIViewController {
         present(alert,animated: true,completion: nil)
     }
     
+    // 메모 공유 메서드
+    @IBAction func share(_ sender: Any) {
+        guard let memo = memo?.content else {return}
+        
+        let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? ComposeViewController {
             vc.editTarget = memo
