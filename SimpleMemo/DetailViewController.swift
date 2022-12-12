@@ -41,10 +41,16 @@ class DetailViewController: UIViewController {
     }
     
     // 메모 공유 메서드
-    @IBAction func share(_ sender: Any) {
+    @IBAction func share(_ sender: UIBarButtonItem) {
         guard let memo = memo?.content else {return}
         
         let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+            
+        // iPad에서 공유 지원
+        if let pc = vc.popoverPresentationController {
+            pc.barButtonItem = sender
+        }
+        
         present(vc, animated: true, completion: nil)
         
     }
