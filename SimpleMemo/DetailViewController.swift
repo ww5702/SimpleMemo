@@ -21,6 +21,25 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    // 메모 삭제 메서드
+    @IBAction func deleteMemo(_ sender: Any) {
+        // 버튼을 실수로 터치할 가능성
+        let alert = UIAlertController(title: "삭제 확인", message: "메모를 삭제할까요?", preferredStyle: .alert)
+        
+        // destructive = 빨간색으로 표시됨
+        let okAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] (action) in
+            DataManager.shared.deleteMemo(self?.memo)
+            // 메모를 삭제하고 이전화면으로 돌아가야하기 때문에 pop
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert,animated: true,completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? ComposeViewController {
             vc.editTarget = memo
